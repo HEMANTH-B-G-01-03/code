@@ -6,7 +6,7 @@ from collections import Counter
 def euclidean_distance(point1, point2):
     return np.sqrt(np.sum((point1 - point2) ** 2))
 
-# K-Nearest Neighbour
+
 def knn_classify(x_train, y_train, x_test, k=3):
     predictions = []
 
