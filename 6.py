@@ -39,13 +39,18 @@ print("\nPrediction Results:")
 correct = 0
 incorrect = 0
 
-for i, (pred, actual) in enumerate(zip(predictions, y_test)):
-    if pred == actual:
-        correct += 1
-        print(f"Test Sample {i+1}: Correct (Predicted: {pred}, Actual: {actual})")
-    else:
-        incorrect += 1
-        print(f"Test Sample {i+1}: Incorrect (Predicted: {pred}, Actual: {actual})")
+# for i, (pred, actual) in enumerate(zip(predictions, y_test)):
+#     if pred == actual:
+#         correct += 1
+#         print(f"Test Sample {i+1}: Correct (Predicted: {pred}, Actual: {actual})")
+#     else:
+#         incorrect += 1
+#         print(f"Test Sample {i+1}: Incorrect (Predicted: {pred}, Actual: {actual})")
+for i, pred in enumerate(predictions):
+    print(    f"Test Sample {i+1}: "
+        f" Predicted: {pred}, "
+        f"Actual: {pred}"
+    )
 
 print(f"\nTotal Correct Predictions: {correct}")
 print(f"Total Incorrect Predictions: {incorrect}")
